@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+docker run -ti \
+	-v $PWD/gym:/gym \
+	--net=host \
+	-u `id -u` \
+	--rm \
+	--privileged \
+	--gpus all \
+	-e DISPLAY \
+	-v /tmp/.X11-unix:/tmp/.X11-unix \
+	-w /gym \
+	gym:local \
+	python3 main.py
