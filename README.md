@@ -3,6 +3,7 @@
 ## Prereqs:
 
 * Docker
+* NVidia GPU
 
 ## Quickstart
 
